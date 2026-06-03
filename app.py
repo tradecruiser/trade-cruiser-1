@@ -192,3 +192,62 @@ st.caption(
     f"Maintenance margin required by the clearing house: ${maintenance_margin:,.2f}/mt  "
     f"(capital absorption — not included in P&L)."
 )
+
+st.divider()
+
+# --------------------------------------------------------------------------- #
+# Methodology
+# --------------------------------------------------------------------------- #
+
+with st.expander("How this tool works"):
+    st.markdown(
+        """
+        **Purpose**
+
+        This tool screens the economic viability of a geographic arbitrage trade in
+        middle distillates — specifically, buying a cargo FOB Singapore and selling
+        it CIF Rotterdam. It answers one question: after accounting for all logistics
+        costs, does the price differential between the two hubs generate a positive
+        return?
+
+        ---
+
+        **Calculation logic**
+
+        | Step | Formula |
+        |------|---------|
+        | Gross Spread | Rotterdam price − Singapore price |
+        | Total Costs | Maritime freight + Storage & financing |
+        | Net Arbitrage P&L | Gross Spread − Total Costs |
+
+        A **positive Net P&L** means the arbitrage window is open: the Rotterdam
+        premium is large enough to cover the cost of moving the cargo westward.
+        A **negative Net P&L** means the window is closed: logistics costs exceed
+        the price differential and the trade destroys value.
+
+        ---
+
+        **Input fields**
+
+        - **Rotterdam price** — the prevailing CIF NWE benchmark for the product
+          (e.g. ICE Low Sulphur Gasoil front-month, converted to USD/mt).
+        - **Singapore price** — the FOB Singapore assessment (e.g. MOPS Gasoil 10ppm).
+        - **Maritime freight** — indicative freight rate for a standard MR or LR2
+          tanker on the Singapore–Rotterdam route, expressed per metric tonne.
+        - **Storage & financing** — blended carry cost covering in-transit financing,
+          port demurrage, and insurance for the duration of the voyage (typically
+          25–35 days East to West).
+        - **Maintenance margin** — the margin deposit required by the clearing house
+          to hedge the position. It is shown for capital-absorption awareness only
+          and is not deducted from the P&L.
+
+        ---
+
+        **Limitations**
+
+        All figures are indicative and intended for screening purposes only. Actual
+        economics depend on live benchmark prices, executed freight levels, exact
+        cargo specifications, and counterparty terms. Verify all inputs against
+        current market data before making trading decisions.
+        """
+    )
