@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Brand palette — derived from TradeCruiser logo & presentation */
+  --color-bg:           #F2EDE2;
+  --color-surface:      #FFFFFF;
+  --color-surface-alt:  #EAE4D8;
+  --color-border:       #DDD6C8;
+
+  --color-text:         #1A1A1A;
+  --color-text-muted:   #787870;
+
+  --color-accent:       #9B2FC7;   /* purple — chapter labels, active states */
+  --color-green:        #4DAA57;   /* gasoline green */
+  --color-orange:       #F4A124;   /* distillate orange */
+  --color-dark:         #2D2D32;   /* crude dark */
+
+  /* Sidebar */
+  --sidebar-bg:         #1E2128;
+  --sidebar-width:      240px;
+  --sidebar-text:       #6B6B82;
+  --sidebar-text-hover: #C8C8D8;
+  --sidebar-active:     #FFFFFF;
+  --sidebar-accent:     #9B2FC7;
+
+  /* Type */
+  --font:               'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Spacing */
+  --radius-sm:          4px;
+  --radius:             8px;
+  --radius-lg:          12px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, video, svg { display: block; max-width: 100%; }
+input, button, textarea, select { font: inherit; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Utility: uppercase label — matches presentation "CHAPTER 11" style */
+.label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* Page scaffold */
+.page {
+  padding: 48px 56px;
+}
+
+.page h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  line-height: 1.1;
+}

@@ -1,0 +1,11 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  margin-left: var(--sidebar-width);
+  flex: 1;
+  min-width: 0;
+  background-color: var(--color-bg);
+}
