@@ -16,10 +16,10 @@
   --color-dark:         #2D2D32;   /* crude dark */
 
   /* Sidebar */
-  --sidebar-bg:         #423B33;
+  --sidebar-bg:         #4D4F54;
   --sidebar-width:      240px;
-  --sidebar-text:       #A39A8C;
-  --sidebar-text-hover: #EFE9DF;
+  --sidebar-text:       #A7A9AF;
+  --sidebar-text-hover: #ECEDEF;
   --sidebar-active:     #FFFFFF;
   --sidebar-accent:     #9B2FC7;
 
