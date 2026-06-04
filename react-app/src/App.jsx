@@ -6,6 +6,7 @@ import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import TrainingMaterial from './pages/TrainingMaterial'
 import Simulatori from './pages/Simulatori'
+import CrackSpreadLab from './pages/CrackSpreadLab'
 import Team from './pages/Team'
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/training" element={<TrainingMaterial />} />
               <Route path="/simulators" element={<Simulatori />} />
+              <Route path="/simulators/crack-spread" element={<CrackSpreadLab />} />
               <Route path="/team" element={<Team />} />
             </Route>
           </Route>

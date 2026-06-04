@@ -1,0 +1,161 @@
+/* ── Page header ──────────────────────────────── */
+.pageHeader {
+  margin-bottom: 36px;
+}
+
+.pageHeader h1 {
+  margin-top: 4px;
+}
+
+.meta {
+  margin-top: 8px;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.metaCount {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* ── Chapter grid ─────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 1280px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 720px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* ── Card base ────────────────────────────────── */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.cardAvailable {
+  cursor: pointer;
+}
+
+.cardAvailable:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+.cardPending {
+  cursor: default;
+}
+
+.cardPending:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* ── Card header ──────────────────────────────── */
+.cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chapterPill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background-color: rgba(155, 47, 199, 0.07);
+  border-radius: var(--radius-sm);
+  padding: 3px 8px;
+}
+
+.availableDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #4DAA57;
+  flex-shrink: 0;
+}
+
+/* ── Card body ────────────────────────────────── */
+.cardTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.cardDesc {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* ── Card footer ──────────────────────────────── */
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-border);
+}
+
+.fileLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+/* Available state: download button */
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  background-color: rgba(155, 47, 199, 0.07);
+  border-radius: var(--radius-sm);
+  transition: background-color 0.12s ease, color 0.12s ease;
+  cursor: pointer;
+}
+
+.downloadBtn:hover {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+/* Pending state: badge */
+.pendingBadge {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  background-color: var(--color-surface-alt);
+  border-radius: var(--radius-sm);
+  padding: 4px 9px;
+  opacity: 0.8;
+}

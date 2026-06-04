@@ -1,0 +1,254 @@
+.lab {
+  max-width: 1180px;
+}
+
+/* ── Back link & header ─────────────────────────── */
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+  transition: color 0.12s ease;
+}
+.back:hover { color: var(--color-accent); }
+
+.header { margin-bottom: 24px; }
+.header h1 { margin-top: 4px; }
+.lede {
+  margin-top: 10px;
+  max-width: 640px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.miniLabel {
+  display: block;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+/* ── Ratio bar ──────────────────────────────────── */
+.ratioBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 18px 22px;
+  margin-bottom: 16px;
+}
+
+.segmented {
+  display: inline-flex;
+  background: var(--color-surface-alt);
+  border-radius: var(--radius);
+  padding: 3px;
+  gap: 2px;
+}
+.segment {
+  border: none;
+  background: transparent;
+  padding: 7px 16px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+.segment:hover { color: var(--color-text); }
+.segmentActive {
+  background: var(--color-surface);
+  color: var(--color-accent);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* ── Glyph ──────────────────────────────────────── */
+.glyph { display: flex; align-items: center; gap: 14px; }
+.glyphGroup { display: flex; gap: 4px; }
+.glyphArrow { color: var(--color-text-muted); flex-shrink: 0; }
+.barrelCrude, .barrelGas, .barrelDist {
+  width: 14px; height: 24px; border-radius: 4px;
+}
+.barrelCrude { background: var(--color-dark); }
+.barrelGas   { background: var(--color-green); }
+.barrelDist  { background: var(--color-orange); }
+
+/* ── Grid + panels ──────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+
+.panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+}
+.panelTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  margin-bottom: 18px;
+}
+
+/* ── Price controls ─────────────────────────────── */
+.control { margin-bottom: 18px; }
+.controlDisabled { opacity: 0.4; }
+.controlHead {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin-bottom: 8px;
+}
+.controlLabel {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.8125rem; font-weight: 600; color: var(--color-text);
+}
+.dot { width: 9px; height: 9px; border-radius: 3px; flex-shrink: 0; }
+.controlValue { font-size: 1rem; font-weight: 700; color: var(--color-text); font-variant-numeric: tabular-nums; }
+.controlUnit { font-size: 0.75rem; font-weight: 500; color: var(--color-text-muted); }
+.slider { width: 100%; cursor: pointer; height: 6px; }
+.perBbl { display: block; margin-top: 6px; font-size: 0.6875rem; color: var(--color-text-muted); font-variant-numeric: tabular-nums; }
+
+/* ── Scenarios ──────────────────────────────────── */
+.scenarioWrap { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--color-border); }
+.scenarios { display: flex; flex-wrap: wrap; gap: 8px; }
+.scenarioBtn {
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 0.75rem; font-weight: 500;
+  padding: 7px 12px; border-radius: var(--radius-sm);
+  cursor: pointer; transition: all 0.12s ease;
+}
+.scenarioBtn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+/* ── Bars ───────────────────────────────────────── */
+.bars {
+  display: flex; align-items: flex-end; justify-content: center; gap: 26px;
+  padding: 8px 0 4px;
+}
+.barCol { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.barStack { display: flex; flex-direction: column; justify-content: flex-end; width: 84px; }
+.barSeg {
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 0.8125rem; font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.barSeg:first-child { border-radius: 6px 6px 0 0; }
+.barStack .barSeg:last-child { border-radius: 0 0 6px 6px; }
+.barStack .barSeg:only-child { border-radius: 6px; }
+.barLabel { font-size: 0.75rem; font-weight: 600; color: var(--color-text); }
+.barMinus { font-size: 1.5rem; color: var(--color-text-muted); align-self: center; padding-bottom: 28px; }
+
+/* ── Crack result ───────────────────────────────── */
+.crackResult {
+  margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--color-border);
+  display: flex; align-items: center;
+}
+.crackResult > div { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.crackBig { font-size: 2.25rem; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.crackUnit { font-size: 1rem; font-weight: 600; opacity: 0.7; }
+.bandBadge {
+  color: #fff; font-size: 0.6875rem; font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: var(--radius-sm);
+}
+.bandSub { font-size: 0.75rem; color: var(--color-text-muted); }
+
+/* ── Calc steps ─────────────────────────────────── */
+.steps { margin-top: 18px; display: flex; flex-direction: column; gap: 2px; }
+.step {
+  display: flex; justify-content: space-between; gap: 12px;
+  font-size: 0.75rem; padding: 6px 0;
+  border-bottom: 1px dashed var(--color-border);
+  font-variant-numeric: tabular-nums;
+}
+.step > span:first-child { color: var(--color-text-muted); }
+.step > span:last-child { color: var(--color-text); font-weight: 500; }
+.stepFinal { border-bottom: none; }
+.stepFinal > span:last-child { color: var(--color-accent); font-weight: 700; }
+
+/* ── Trade panel ────────────────────────────────── */
+.tradePanel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+}
+.tradeGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.2fr 1fr;
+  gap: 22px;
+  align-items: start;
+}
+@media (max-width: 900px) { .tradeGrid { grid-template-columns: 1fr; } }
+
+.sideToggle { display: flex; flex-direction: column; gap: 8px; }
+.sideBtn {
+  text-align: left; border: 1px solid var(--color-border);
+  background: var(--color-bg); border-radius: var(--radius);
+  padding: 12px 14px; cursor: pointer; transition: all 0.12s ease;
+  font-size: 0.875rem; font-weight: 700; color: var(--color-text);
+  display: flex; flex-direction: column; gap: 3px;
+}
+.sideBtn:hover:not(:disabled) { border-color: var(--color-accent); }
+.sideBtn:disabled { cursor: default; }
+.sideActive {
+  border-color: var(--color-accent);
+  background: rgba(155, 47, 199, 0.06);
+}
+.sideHint { font-size: 0.6875rem; font-weight: 500; color: var(--color-text-muted); }
+
+.legs { font-size: 0.8125rem; color: var(--color-text); }
+.legRow { display: flex; align-items: center; gap: 8px; padding: 5px 0; }
+.legPill {
+  color: #fff; font-size: 0.625rem; font-weight: 700; letter-spacing: 0.05em;
+  padding: 2px 7px; border-radius: 4px; min-width: 38px; text-align: center;
+}
+.buyPill { background: #2E8B45; }
+.sellPill { background: #C0392B; }
+
+.lotsBox { display: flex; flex-direction: column; }
+.lotsInput {
+  width: 100%; padding: 9px 12px; border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm); background: var(--color-bg);
+  font-size: 0.875rem; font-weight: 600; color: var(--color-text);
+  margin-bottom: 10px; outline: none;
+}
+.lotsInput:focus { border-color: var(--color-accent); }
+.enterBtn, .closeBtn {
+  width: 100%; padding: 11px; border: none; border-radius: var(--radius-sm);
+  font-size: 0.8125rem; font-weight: 600; cursor: pointer; color: #fff;
+  transition: opacity 0.12s ease;
+}
+.enterBtn { background: var(--color-accent); }
+.closeBtn { background: var(--color-dark); }
+.enterBtn:hover, .closeBtn:hover { opacity: 0.88; }
+
+/* ── P&L panel ──────────────────────────────────── */
+.pnlPanel {
+  display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-end;
+  margin-top: 22px; padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+}
+.pnlItem { display: flex; flex-direction: column; gap: 2px; }
+.pnlItem .miniLabel { margin-bottom: 2px; }
+.pnlVal { font-size: 0.9375rem; font-weight: 600; color: var(--color-text); font-variant-numeric: tabular-nums; }
+.pnlBig { margin-left: auto; text-align: right; }
+.pnlMoney { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
