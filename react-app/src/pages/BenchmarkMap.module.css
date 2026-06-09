@@ -1,0 +1,74 @@
+.lab { max-width: 760px; }
+
+.back {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.8125rem; font-weight: 500; color: var(--color-text-muted);
+  margin-bottom: 20px; transition: color 0.12s ease;
+}
+.back:hover { color: var(--color-accent); }
+
+.header { margin-bottom: 18px; }
+.header h1 { margin-top: 4px; }
+.lede { margin-top: 10px; font-size: 0.875rem; line-height: 1.6; color: var(--color-text-muted); }
+
+/* ── Map ────────────────────────────────────────── */
+.mapCard {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 14px 14px 12px; margin-bottom: 14px;
+}
+.map { width: 100%; height: auto; display: block; }
+.sea { fill: #ECE6D8; }
+.grat { stroke: rgba(0, 0, 0, 0.04); stroke-width: 1; }
+.land { fill: #D4CCBA; }
+
+.hotspot { cursor: pointer; }
+.hotspot:hover circle:last-of-type { stroke: var(--color-accent); }
+.pulse { fill: var(--color-text-muted); opacity: 0.18; animation: pulse 1.8s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+@keyframes pulse { 0%, 100% { opacity: 0.1; } 50% { opacity: 0.28; } }
+.hsLabel { font-size: 12px; font-weight: 700; }
+.hsWrong { animation: shake 0.3s ease; }
+@keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
+
+.legend { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 8px; }
+.legendItem { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; font-weight: 600; color: var(--color-text); }
+.legendItem em { font-style: normal; font-weight: 400; color: var(--color-text-muted); }
+.dot { width: 9px; height: 9px; border-radius: 50%; }
+
+/* ── Scoreboard ─────────────────────────────────── */
+.scoreboard { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+.scoreItem {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius); padding: 11px 14px; display: flex; flex-direction: column; gap: 1px;
+}
+.scoreItem span { font-size: 0.625rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-muted); }
+.scoreItem strong { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; color: var(--color-text); font-variant-numeric: tabular-nums; }
+.scoreItem em { font-size: 0.6875rem; font-style: normal; color: var(--color-text-muted); }
+
+/* ── Stage ──────────────────────────────────────── */
+.stage {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 26px 28px; text-align: center;
+}
+.clueLabel { font-size: 0.625rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 8px; }
+.clue { font-size: 1.2rem; font-weight: 700; letter-spacing: -0.01em; line-height: 1.35; color: var(--color-text); max-width: 560px; margin: 0 auto; }
+
+.reveal { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--color-border); }
+.verdict { font-size: 1rem; font-weight: 800; letter-spacing: -0.01em; }
+.why { margin: 10px auto 18px; max-width: 480px; font-size: 0.875rem; line-height: 1.55; color: var(--color-text-muted); }
+
+.nextBtn {
+  display: inline-flex; align-items: center; gap: 7px; border: none; border-radius: var(--radius);
+  background: var(--color-accent); color: #fff; font-size: 0.875rem; font-weight: 600;
+  padding: 11px 22px; cursor: pointer; transition: opacity 0.12s ease;
+}
+.nextBtn:hover { opacity: 0.9; }
+
+/* ── Summary ────────────────────────────────────── */
+.summary {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 44px 32px; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.grade { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); }
+.finalScore { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em; color: var(--color-text); font-variant-numeric: tabular-nums; }
+.finalSub { font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 18px; }

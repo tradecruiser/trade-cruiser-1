@@ -12,6 +12,7 @@ import MarketMover from './pages/MarketMover'
 import ContractBuilder from './pages/ContractBuilder'
 import MarketPlayers from './pages/MarketPlayers'
 import ProductSeasons from './pages/ProductSeasons'
+import BenchmarkMap from './pages/BenchmarkMap'
 import Team from './pages/Team'
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
               <Route path="/simulators/contract-builder" element={<ContractBuilder />} />
               <Route path="/simulators/market-players" element={<MarketPlayers />} />
               <Route path="/simulators/product-seasons" element={<ProductSeasons />} />
+              <Route path="/simulators/benchmark-map" element={<BenchmarkMap />} />
               <Route path="/team" element={<Team />} />
             </Route>
           </Route>
