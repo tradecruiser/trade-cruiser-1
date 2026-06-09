@@ -10,6 +10,7 @@ import CrackSpreadLab from './pages/CrackSpreadLab'
 import MarginCallSimulator from './pages/MarginCallSimulator'
 import MarketMover from './pages/MarketMover'
 import ContractBuilder from './pages/ContractBuilder'
+import MarketPlayers from './pages/MarketPlayers'
 import Team from './pages/Team'
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
               <Route path="/simulators/margin-call" element={<MarginCallSimulator />} />
               <Route path="/simulators/market-mover" element={<MarketMover />} />
               <Route path="/simulators/contract-builder" element={<ContractBuilder />} />
+              <Route path="/simulators/market-players" element={<MarketPlayers />} />
               <Route path="/team" element={<Team />} />
             </Route>
           </Route>
