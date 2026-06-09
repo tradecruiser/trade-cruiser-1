@@ -8,6 +8,7 @@ import TrainingMaterial from './pages/TrainingMaterial'
 import Simulatori from './pages/Simulatori'
 import CrackSpreadLab from './pages/CrackSpreadLab'
 import MarginCallSimulator from './pages/MarginCallSimulator'
+import MarketMover from './pages/MarketMover'
 import Team from './pages/Team'
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
               <Route path="/simulators" element={<Simulatori />} />
               <Route path="/simulators/crack-spread" element={<CrackSpreadLab />} />
               <Route path="/simulators/margin-call" element={<MarginCallSimulator />} />
+              <Route path="/simulators/market-mover" element={<MarketMover />} />
               <Route path="/team" element={<Team />} />
             </Route>
           </Route>

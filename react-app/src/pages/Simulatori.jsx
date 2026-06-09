@@ -12,7 +12,7 @@ const simulators = [
   { chapter: 3,  title: 'Terminology Trainer',  type: 'Quiz',               Icon: GraduationCap, description: 'Match trading terms to live scenarios: long vs short, bid-offer, slippage, open interest, VaR.' },
   { chapter: 4,  title: 'Refinery Flow',        type: 'Process Builder',    Icon: Factory,       description: 'Route a barrel through distillation, conversion, and treatment to build the right product slate.' },
   { chapter: 5,  title: 'Benchmark Map',        type: 'Map Matching',       Icon: MapIcon,       description: 'Place global crude benchmarks — Brent, WTI, Dubai — on the map and match them to their grades.' },
-  { chapter: 6,  title: 'Market Mover',         type: 'Prediction Game',    Icon: Newspaper,     description: 'React to breaking headlines — OPEC cuts, outages, inventory builds — and call the price direction.' },
+  { chapter: 6,  title: 'Market Mover',         type: 'Prediction Game',    Icon: Newspaper, to: '/simulators/market-mover', description: 'React to breaking headlines — OPEC cuts, outages, inventory builds — and call the price direction.' },
   { chapter: 7,  title: 'Product Seasons',      type: 'Matching Game',      Icon: CalendarDays,  description: 'Balance a product portfolio across the year as seasonal demand for gasoline and heating oil shifts.' },
   { chapter: 8,  title: 'Market Players',       type: 'Matching Game',      Icon: Users,         description: 'Identify each market participant — producer, refiner, hedger, speculator, market maker — by their motive.' },
   { chapter: 9,  title: 'Exchange vs OTC',      type: 'Decision Sim',       Icon: ArrowLeftRight, description: 'Route trades through an exchange and clearing house or OTC, and weigh margin against counterparty risk.' },
