@@ -6,7 +6,7 @@ const libraryChapters = [
   { id: 1,  title: 'Chapter 1: Introduction to Oil Trading',                             description: 'Why hedging funds are essential in modern markets; why physical trading is inefficient without hedging and financial markets.' },
   { id: 2,  title: 'Chapter 2: Physical Characteristics of Crude Oil',                   description: 'Understanding the fundamental physical properties of crude oil.' },
   { id: 3,  title: 'Chapter 3: Trading Terminology',                                     description: 'Bearish vs bullish, long vs short, exposure, bid-offer spread, traded volume, open interest, slippage, indicative vs firm prices, types of orders, VaR, etc.' },
-  { id: 4,  title: 'Chapter 4: Introduction to Refining',                                description: 'The three main refining processes: distillation, conversion, and treatment.' },
+  { id: 4,  available: true, title: 'Chapter 4: Introduction to Refining',              description: 'The three main refining processes: distillation, conversion, and treatment.' },
   { id: 5,  available: true, title: 'Chapter 5: Crude Oil Markets',                      description: 'Overview and dynamics of global crude oil markets.' },
   { id: 6,  available: true, title: 'Chapter 6: What Affects the Market',                description: 'Key drivers and factors influencing oil market fluctuations.' },
   { id: 7,  available: true, title: 'Chapter 7: Oil Product Markets',                    description: 'Analysis of the refined oil products market.' },
