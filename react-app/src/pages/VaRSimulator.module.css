@@ -1,0 +1,96 @@
+.lab { max-width: 760px; }
+
+.back {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.8125rem; font-weight: 500; color: var(--color-text-muted);
+  margin-bottom: 20px; transition: color 0.12s ease;
+}
+.back:hover { color: var(--color-accent); }
+
+.header { margin-bottom: 18px; }
+.header h1 { margin-top: 4px; }
+.lede { margin-top: 10px; font-size: 0.875rem; line-height: 1.6; color: var(--color-text-muted); }
+
+/* ── Controls ──────────────────────────────────────── */
+.controls {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 18px 20px; margin-bottom: 14px;
+}
+.sliderRow { margin-bottom: 16px; }
+.sliderHead { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.sliderHead span   { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: var(--color-text-muted); }
+.sliderHead strong { font-size: 1.05rem; font-weight: 800; color: var(--color-text); font-variant-numeric: tabular-nums; }
+.slider {
+  -webkit-appearance: none; appearance: none; width: 100%; height: 6px;
+  border-radius: 3px; background: var(--color-surface-alt); outline: none; cursor: pointer;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; width: 20px; height: 20px;
+  border-radius: 50%; background: var(--color-accent); cursor: pointer;
+  border: 3px solid var(--color-surface); box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+.slider::-moz-range-thumb {
+  width: 20px; height: 20px; border-radius: 50%; background: var(--color-accent);
+  cursor: pointer; border: 3px solid var(--color-surface);
+}
+
+.confRow { display: flex; align-items: center; gap: 14px; }
+.confLabel { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: var(--color-text-muted); }
+.confToggle { display: inline-flex; gap: 6px; }
+.confBtn {
+  padding: 6px 16px; border-radius: var(--radius-sm); border: 1.5px solid var(--color-border);
+  background: var(--color-surface-alt); font-size: 0.8125rem; font-weight: 700;
+  color: var(--color-text-muted); cursor: pointer; transition: all 0.12s ease;
+}
+.confActive { border-color: var(--color-accent); background: rgba(155,47,199,0.08); color: var(--color-accent); }
+
+/* ── Readouts ──────────────────────────────────────── */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+.stat {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius); padding: 12px 14px; display: flex; flex-direction: column; gap: 2px;
+}
+.stat span   { font-size: 0.625rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-muted); }
+.stat strong { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; color: var(--color-text); font-variant-numeric: tabular-nums; }
+.stat em     { font-size: 0.625rem; font-style: normal; color: var(--color-text-muted); }
+
+/* ── Utilisation bar ───────────────────────────────── */
+.utilCard {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius); padding: 14px 16px 10px; margin-bottom: 14px;
+}
+.utilTrack { position: relative; height: 14px; border-radius: 7px; background: var(--color-surface-alt); overflow: hidden; }
+.utilFill { height: 100%; border-radius: 7px; transition: width 0.15s ease, background 0.15s ease; }
+.utilLimit { position: absolute; top: -2px; right: 0; width: 2px; height: 18px; background: var(--color-text); }
+.utilLabels { display: flex; justify-content: space-between; margin-top: 5px; font-size: 0.625rem; color: var(--color-text-muted); }
+.utilLimitLabel { font-weight: 700; color: var(--color-text); }
+
+/* ── Distribution chart ────────────────────────────── */
+.chartCard {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 12px 14px; margin-bottom: 14px;
+}
+.chart { width: 100%; height: auto; display: block; }
+.axis { stroke: var(--color-border); stroke-width: 1.5; }
+.curve { fill: none; stroke: var(--color-green); stroke-width: 2.5; }
+.tail { fill: rgba(224,85,85,0.3); stroke: none; }
+.varLine { stroke: #E05555; stroke-width: 1.5; stroke-dasharray: 3 3; }
+.varLabel { font-size: 11px; font-weight: 800; fill: #E05555; }
+.tailNote { font-size: 9px; font-weight: 700; fill: #E05555; }
+.axisNote { font-size: 9px; fill: var(--color-text-muted); }
+
+/* ── Verdict ───────────────────────────────────────── */
+.verdict {
+  display: flex; align-items: flex-start; gap: 12px;
+  border-radius: var(--radius-lg); padding: 16px 20px;
+  font-size: 0.875rem; line-height: 1.55;
+}
+.verdict svg { flex-shrink: 0; margin-top: 1px; }
+.verdict p { margin: 0; color: var(--color-text); }
+.verdict strong { font-weight: 800; }
+.verdictOk { background: rgba(77,170,87,0.08); border: 1px solid var(--color-green); }
+.verdictOk svg { color: var(--color-green); }
+.verdictOk strong { color: var(--color-green); }
+.verdictBreach { background: rgba(224,85,85,0.08); border: 1px solid #E05555; }
+.verdictBreach svg { color: #E05555; }
+.verdictBreach strong { color: #E05555; }

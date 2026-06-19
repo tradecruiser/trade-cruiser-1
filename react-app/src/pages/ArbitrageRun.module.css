@@ -1,0 +1,99 @@
+.lab { max-width: 760px; }
+
+.back {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.8125rem; font-weight: 500; color: var(--color-text-muted);
+  margin-bottom: 20px; transition: color 0.12s ease;
+}
+.back:hover { color: var(--color-accent); }
+
+.header { margin-bottom: 18px; }
+.header h1 { margin-top: 4px; }
+.lede { margin-top: 10px; font-size: 0.875rem; line-height: 1.6; color: var(--color-text-muted); }
+
+/* ── Scoreboard ────────────────────────────────────── */
+.scoreboard { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+.scoreItem {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius); padding: 11px 14px; display: flex; flex-direction: column; gap: 1px;
+}
+.scoreItem span   { font-size: 0.625rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-muted); }
+.scoreItem strong { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; color: var(--color-text); font-variant-numeric: tabular-nums; }
+.scoreItem em     { font-size: 0.6875rem; font-style: normal; color: var(--color-text-muted); }
+
+/* ── Stage ─────────────────────────────────────────── */
+.stage {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 22px 24px;
+}
+
+/* lane diagram */
+.lane {
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px;
+  margin-bottom: 20px;
+}
+.hub {
+  background: var(--color-surface-alt); border: 1px solid var(--color-border);
+  border-radius: var(--radius); padding: 14px 16px;
+  display: flex; flex-direction: column; gap: 3px; text-align: center;
+}
+.hubTag {
+  align-self: center; font-size: 0.5625rem; font-weight: 800; letter-spacing: 0.1em;
+  color: #fff; background: var(--color-green); padding: 2px 8px; border-radius: 10px;
+}
+.hubTagSell { background: var(--color-orange); }
+.hubName { font-size: 0.9375rem; font-weight: 700; color: var(--color-text); }
+.hubPrice { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; color: var(--color-text); font-variant-numeric: tabular-nums; }
+
+.leg { display: flex; flex-direction: column; align-items: center; gap: 4px; color: var(--color-text-muted); }
+.leg svg { color: var(--color-text-muted); }
+.freightTag { font-size: 0.6875rem; font-weight: 700; color: #E05555; white-space: nowrap; }
+.product { font-size: 0.625rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* actions */
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.actBtn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 14px; border-radius: var(--radius); border: 1.5px solid var(--color-border);
+  background: var(--color-surface-alt); font-size: 0.9375rem; font-weight: 700;
+  color: var(--color-text); cursor: pointer; transition: all 0.12s ease;
+}
+.actShip:hover { border-color: var(--color-green); background: rgba(77,170,87,0.08); }
+.actHold:hover { border-color: var(--color-orange); background: rgba(244,161,36,0.08); }
+
+/* ── Reveal ────────────────────────────────────────── */
+.reveal { }
+.windowCard {
+  display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px;
+  background: var(--color-surface-alt); border: 1px solid var(--color-border);
+  border-radius: var(--radius); padding: 12px 16px; margin-bottom: 16px;
+}
+.windowSvg { width: 100%; max-width: 260px; height: auto; }
+.baseLine { stroke: var(--color-border); stroke-width: 1.5; }
+.freightLine { stroke: #E05555; stroke-width: 1.5; stroke-dasharray: 5 4; }
+.barLabel { font-size: 10px; font-weight: 800; fill: var(--color-text); }
+.freightLabel { font-size: 10px; font-weight: 700; fill: #E05555; }
+
+.math { display: flex; flex-direction: column; gap: 3px; font-size: 0.8125rem; color: var(--color-text-muted); white-space: nowrap; }
+.math strong { color: var(--color-text); font-variant-numeric: tabular-nums; }
+.mathNet { margin-top: 4px; padding-top: 5px; border-top: 1px solid var(--color-border); font-weight: 600; }
+
+.verdict { display: block; font-size: 0.9375rem; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 8px; }
+.why { margin: 0 0 16px; font-size: 0.875rem; line-height: 1.55; color: var(--color-text-muted); }
+
+.nextBtn {
+  display: inline-flex; align-items: center; gap: 7px; border: none; border-radius: var(--radius);
+  background: var(--color-accent); color: #fff; font-size: 0.875rem; font-weight: 600;
+  padding: 11px 22px; cursor: pointer; transition: opacity 0.12s ease;
+}
+.nextBtn:hover { opacity: 0.9; }
+
+/* ── Summary ───────────────────────────────────────── */
+.summary {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 44px 32px; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.grade      { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); }
+.finalScore { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em; color: var(--color-text); font-variant-numeric: tabular-nums; }
+.finalSub   { font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 18px; }

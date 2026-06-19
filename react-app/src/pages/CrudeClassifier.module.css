@@ -1,0 +1,98 @@
+.lab { max-width: 760px; }
+
+.back {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.8125rem; font-weight: 500; color: var(--color-text-muted);
+  margin-bottom: 20px; transition: color 0.12s ease;
+}
+.back:hover { color: var(--color-accent); }
+
+.header { margin-bottom: 18px; }
+.header h1 { margin-top: 4px; }
+.lede { margin-top: 10px; font-size: 0.875rem; line-height: 1.6; color: var(--color-text-muted); }
+
+/* ── Map ───────────────────────────────────────────── */
+.mapCard {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 12px; margin-bottom: 14px;
+}
+.map { width: 100%; height: auto; display: block; }
+.split { stroke: var(--color-border); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.qLabel { font-size: 10px; font-weight: 800; letter-spacing: 0.06em; opacity: 0.85; }
+.axis { font-size: 10px; fill: var(--color-text-muted); font-weight: 600; }
+.dotLabel { font-size: 9px; font-weight: 700; fill: var(--color-text); }
+.ghost { animation: pop 0.3s ease; }
+@keyframes pop { 0% { opacity: 0; r: 2; } 100% { opacity: 1; } }
+
+/* ── Scoreboard ────────────────────────────────────── */
+.scoreboard { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+.scoreItem {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius); padding: 11px 14px; display: flex; flex-direction: column; gap: 1px;
+}
+.scoreItem span   { font-size: 0.625rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-muted); }
+.scoreItem strong { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; color: var(--color-text); font-variant-numeric: tabular-nums; }
+.scoreItem em     { font-size: 0.6875rem; font-style: normal; color: var(--color-text-muted); }
+
+/* ── Stage ─────────────────────────────────────────── */
+.stage {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 22px 24px;
+}
+
+.assay { margin-bottom: 18px; }
+.assayHead { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+.assayLabel { font-size: 0.625rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted); }
+.assayName  { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; color: var(--color-text); }
+
+.assayStats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.stat {
+  background: var(--color-surface-alt); border: 1px solid var(--color-border);
+  border-radius: var(--radius); padding: 12px 14px;
+}
+.stat > span    { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-text-muted); }
+.stat > strong  { display: block; font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; color: var(--color-text); font-variant-numeric: tabular-nums; margin: 2px 0 10px; }
+
+.scale { margin-top: 4px; }
+.scaleLabels { display: flex; justify-content: space-between; font-size: 0.625rem; color: var(--color-text-muted); margin-bottom: 4px; }
+.scaleTrack { position: relative; height: 6px; border-radius: 3px; background: var(--color-border); }
+.scaleSplit { position: absolute; top: -2px; width: 1.5px; height: 10px; background: var(--color-text-muted); opacity: 0.5; }
+.scaleDot { position: absolute; top: 50%; width: 12px; height: 12px; border-radius: 50%; transform: translate(-50%, -50%); border: 2px solid var(--color-surface); }
+
+/* ── Quadrant buttons ──────────────────────────────── */
+.quadGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.quadBtn {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 3px;
+  background: var(--color-surface-alt); border: 1.5px solid var(--color-border);
+  border-radius: var(--radius); padding: 12px 14px; cursor: pointer;
+  transition: border-color 0.12s ease, background 0.12s ease; text-align: left;
+}
+.quadBtn:not(:disabled):hover { border-color: var(--color-accent); background: rgba(155,47,199,0.04); }
+.quadBtn:disabled { cursor: default; }
+.quadCorrect { background: rgba(77,170,87,0.08) !important; }
+.quadWrong   { border-color: #E05555 !important; background: rgba(224,85,85,0.08) !important; }
+.quadDot { width: 10px; height: 10px; border-radius: 50%; }
+.quadName { font-size: 0.875rem; font-weight: 700; color: var(--color-text); }
+.quadNote { font-size: 0.6875rem; color: var(--color-text-muted); }
+
+/* ── Reveal ────────────────────────────────────────── */
+.reveal { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--color-border); }
+.verdict { font-size: 0.9375rem; font-weight: 800; letter-spacing: -0.01em; }
+.why { margin: 8px 0 16px; font-size: 0.875rem; line-height: 1.55; color: var(--color-text-muted); }
+
+.nextBtn {
+  display: inline-flex; align-items: center; gap: 7px; border: none; border-radius: var(--radius);
+  background: var(--color-accent); color: #fff; font-size: 0.875rem; font-weight: 600;
+  padding: 11px 22px; cursor: pointer; transition: opacity 0.12s ease;
+}
+.nextBtn:hover { opacity: 0.9; }
+
+/* ── Summary ───────────────────────────────────────── */
+.summary {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 44px 32px; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.grade      { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); }
+.finalScore { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em; color: var(--color-text); font-variant-numeric: tabular-nums; }
+.finalSub   { font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 18px; }

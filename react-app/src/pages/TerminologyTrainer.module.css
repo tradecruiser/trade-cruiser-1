@@ -1,0 +1,80 @@
+.lab { max-width: 760px; }
+
+.back {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.8125rem; font-weight: 500; color: var(--color-text-muted);
+  margin-bottom: 20px; transition: color 0.12s ease;
+}
+.back:hover { color: var(--color-accent); }
+
+.header { margin-bottom: 18px; }
+.header h1 { margin-top: 4px; }
+.lede { margin-top: 10px; font-size: 0.875rem; line-height: 1.6; color: var(--color-text-muted); }
+
+/* ── Scoreboard ────────────────────────────────────── */
+.scoreboard { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+.scoreItem {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius); padding: 11px 14px; display: flex; flex-direction: column; gap: 1px;
+}
+.scoreItem span   { font-size: 0.625rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-muted); }
+.scoreItem strong { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; color: var(--color-text); font-variant-numeric: tabular-nums; }
+.scoreItem em     { font-size: 0.6875rem; font-style: normal; color: var(--color-text-muted); }
+
+/* ── Stage ─────────────────────────────────────────── */
+.stage {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 22px 24px;
+}
+
+/* terminal-style scenario card */
+.terminal {
+  background: var(--color-dark); border-radius: var(--radius);
+  overflow: hidden; margin-bottom: 18px;
+}
+.terminalBar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 14px; background: rgba(255,255,255,0.04);
+  color: var(--color-text-muted); font-size: 0.625rem; font-weight: 700; letter-spacing: 0.12em;
+}
+.terminalBar svg { color: var(--color-green); }
+.terminalDot { width: 7px; height: 7px; border-radius: 50%; background: var(--color-green); margin-left: auto; }
+.scenario {
+  margin: 0; padding: 18px 18px 20px; color: #F2EDE2;
+  font-size: 1.1rem; font-weight: 600; line-height: 1.5; letter-spacing: -0.01em;
+}
+
+/* ── Options ───────────────────────────────────────── */
+.options { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.option {
+  background: var(--color-surface-alt); border: 1.5px solid var(--color-border);
+  border-radius: var(--radius); padding: 13px 16px;
+  font-size: 0.875rem; font-weight: 600; color: var(--color-text);
+  cursor: pointer; transition: border-color 0.12s ease, background 0.12s ease; text-align: left;
+}
+.option:not(:disabled):hover { border-color: var(--color-accent); background: rgba(155,47,199,0.04); }
+.option:disabled { cursor: default; }
+.optionCorrect { border-color: var(--color-green) !important; background: rgba(77,170,87,0.1) !important; }
+.optionWrong   { border-color: #E05555 !important; background: rgba(224,85,85,0.1) !important; }
+
+/* ── Reveal ────────────────────────────────────────── */
+.reveal { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--color-border); }
+.verdict { font-size: 0.9375rem; font-weight: 800; letter-spacing: -0.01em; }
+.why { margin: 8px 0 16px; font-size: 0.875rem; line-height: 1.55; color: var(--color-text-muted); }
+
+.nextBtn {
+  display: inline-flex; align-items: center; gap: 7px; border: none; border-radius: var(--radius);
+  background: var(--color-accent); color: #fff; font-size: 0.875rem; font-weight: 600;
+  padding: 11px 22px; cursor: pointer; transition: opacity 0.12s ease;
+}
+.nextBtn:hover { opacity: 0.9; }
+
+/* ── Summary ───────────────────────────────────────── */
+.summary {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg); padding: 44px 32px; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.grade      { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); }
+.finalScore { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em; color: var(--color-text); font-variant-numeric: tabular-nums; }
+.finalSub   { font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 18px; }

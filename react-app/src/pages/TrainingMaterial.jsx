@@ -3,9 +3,9 @@ import { FileText, Download, Eye, X, ExternalLink } from 'lucide-react'
 import styles from './TrainingMaterial.module.css'
 
 const libraryChapters = [
-  { id: 1,  title: 'Chapter 1: Introduction to Oil Trading',                             description: 'Why hedging funds are essential in modern markets; why physical trading is inefficient without hedging and financial markets.' },
-  { id: 2,  title: 'Chapter 2: Physical Characteristics of Crude Oil',                   description: 'Understanding the fundamental physical properties of crude oil.' },
-  { id: 3,  title: 'Chapter 3: Trading Terminology',                                     description: 'Bearish vs bullish, long vs short, exposure, bid-offer spread, traded volume, open interest, slippage, indicative vs firm prices, types of orders, VaR, etc.' },
+  { id: 1,  available: true, title: 'Chapter 1: Introduction to Oil Trading',           description: 'Why hedging funds are essential in modern markets; why physical trading is inefficient without hedging and financial markets.' },
+  { id: 2,  available: true, title: 'Chapter 2: Physical Characteristics of Crude Oil', description: 'Understanding the fundamental physical properties of crude oil.' },
+  { id: 3,  available: true, title: 'Chapter 3: Trading Terminology',                   description: 'Bearish vs bullish, long vs short, exposure, bid-offer spread, traded volume, open interest, slippage, indicative vs firm prices, types of orders, VaR, etc.' },
   { id: 4,  available: true, title: 'Chapter 4: Introduction to Refining',              description: 'The three main refining processes: distillation, conversion, and treatment.' },
   { id: 5,  available: true, title: 'Chapter 5: Crude Oil Markets',                      description: 'Overview and dynamics of global crude oil markets.' },
   { id: 6,  available: true, title: 'Chapter 6: What Affects the Market',                description: 'Key drivers and factors influencing oil market fluctuations.' },
@@ -14,11 +14,11 @@ const libraryChapters = [
   { id: 9,  available: true, title: 'Chapter 9: The Financial Marketplace',              description: 'ICE, clearing houses, exchanges, and OTC (Over-The-Counter) markets.' },
   { id: 10, available: true, title: 'Chapter 10: Flat Price Trading and Financial Contracts', description: 'Understanding futures, forwards, and swaps.' },
   { id: 11, available: true, title: 'Chapter 11: Crack Spread Trading',                  description: 'Mechanics and strategies of crack spread trading.' },
-  { id: 12, title: 'Chapter 12: Geographical Spread Trading',                            description: 'Arbitrage and geographical price differentials.' },
-  { id: 13, title: 'Chapter 13: Product Quality Spread Trading',                         description: 'Trading strategies based on product specifications and quality differences.' },
-  { id: 14, title: 'Chapter 14: Calendar Spread Trading',                                description: 'Time-based spread trading strategies.' },
-  { id: 15, title: 'Chapter 15: Introduction to Risk Management',                        description: 'General principles and frameworks of risk management in trading.' },
-  { id: 16, title: 'Chapter 16: Understanding Exposure in Physical Trading',             description: 'Identifying and managing price and physical exposure.' },
+  { id: 12, available: true, title: 'Chapter 12: Geographical Spread Trading',          description: 'Arbitrage and geographical price differentials.' },
+  { id: 13, available: true, title: 'Chapter 13: Product Quality Spread Trading',       description: 'Trading strategies based on product specifications and quality differences.' },
+  { id: 14, available: true, title: 'Chapter 14: Calendar Spread Trading',              description: 'Time-based spread trading strategies.' },
+  { id: 15, available: true, title: 'Chapter 15: Introduction to Risk Management',      description: 'General principles and frameworks of risk management in trading.' },
+  { id: 16, available: true, title: 'Chapter 16: Understanding Exposure in Physical Trading', description: 'Identifying and managing price and physical exposure.' },
   { id: 17, title: 'Chapter 17: Types of Pricing in Physical Trading',                   description: 'Pricing mechanisms, formulas, and Incoterms.' },
   { id: 18, title: 'Chapter 18: Process Analysis Cycle in Physical Trading with Hedging', description: 'End-to-end analysis of physical trading operations combined with hedging strategies.' },
 ]

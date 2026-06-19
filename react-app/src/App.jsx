@@ -14,6 +14,14 @@ import MarketPlayers from './pages/MarketPlayers'
 import ProductSeasons from './pages/ProductSeasons'
 import BenchmarkMap from './pages/BenchmarkMap'
 import RefineryFlow from './pages/RefineryFlow'
+import HedgeExpose from './pages/HedgeExpose'
+import CrudeClassifier from './pages/CrudeClassifier'
+import TerminologyTrainer from './pages/TerminologyTrainer'
+import ArbitrageRun from './pages/ArbitrageRun'
+import QualitySpread from './pages/QualitySpread'
+import CurveTrader from './pages/CurveTrader'
+import VaRSimulator from './pages/VaRSimulator'
+import ExposureTracker from './pages/ExposureTracker'
 import Team from './pages/Team'
 
 export default function App() {
@@ -36,6 +44,14 @@ export default function App() {
               <Route path="/simulators/product-seasons" element={<ProductSeasons />} />
               <Route path="/simulators/benchmark-map" element={<BenchmarkMap />} />
               <Route path="/simulators/refinery-flow" element={<RefineryFlow />} />
+              <Route path="/simulators/hedge-expose" element={<HedgeExpose />} />
+              <Route path="/simulators/crude-classifier" element={<CrudeClassifier />} />
+              <Route path="/simulators/terminology-trainer" element={<TerminologyTrainer />} />
+              <Route path="/simulators/arbitrage-run" element={<ArbitrageRun />} />
+              <Route path="/simulators/quality-spread" element={<QualitySpread />} />
+              <Route path="/simulators/curve-trader" element={<CurveTrader />} />
+              <Route path="/simulators/var-simulator" element={<VaRSimulator />} />
+              <Route path="/simulators/exposure-tracker" element={<ExposureTracker />} />
               <Route path="/team" element={<Team />} />
             </Route>
           </Route>
